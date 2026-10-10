@@ -1,8 +1,8 @@
 .grid-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    align-content: center;
     gap: 10px;
     width: 100%;
 }
@@ -13,4 +13,25 @@
     width: 200px;
     border-radius: 5px;
     font-size: 40px;
+}
+
+/* Medium screens */
+@media screen and (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 200px);
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 650px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 200px);
+    }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 450px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 200px);
+    }
 }
